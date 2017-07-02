@@ -12,7 +12,7 @@
     <!-- Latest compiled JavaScript -->
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
     <title>test jquery animate</title>
-     <link rel="stylesheet" type="text/css" href="/resources/css/testAnimate.css">
+     <link rel="stylesheet" type="text/css" href="/FirstWeb/resources/css/testAnimate.css">
 </head>
 <body>
 
@@ -20,36 +20,38 @@
     <!--<div class="col-sm-1"></div>-->
     <div class="col-sm-6">
         <div id ="container">
-        	<div id="girl">
-                <img src="/resources/image/girl.PNG" alt="girl" width="80" height="80"> 
+            <div id="girl">
+                <img src="/FirstWeb/resources/image/girl.PNG" alt="girl" width="80" height="80">
             </div>
             <div id="fish">
-                <img src="/resources/image/fish.PNG" alt="fish" width="50" height="50">
+                <img src="/FirstWeb/resources/image/fish.PNG" alt="fish" width="50" height="50">
             </div>
         </div>
+        <div id="size">
+            <span>0</span><span style="float: right;">400</span>
+        </div>
     </div>
-    <div class="col-sm-5">
-        <h2>Animate Test</h2>
-        <p>please command left, right, up, down</p>
-        <form>
-            <div class="form-group">
-                <label for="command">Command:</label>
-                <textarea class="form-control has-success" rows="10" id="command" placeholder="left 60;"></textarea>
+        <div class="col-sm-5">
+            <div>
+                <button type="button" id='run_button' class="btn btn-success btn-lg">Run</button>
+                <button type="button" id='test_button' class="btn btn-default btn-lg">fish</button>
+                <button type="button" id='play_button' class="btn btn-primary btn-lg">Play</button>
+                <button type="button" id='refresh_button' class="btn btn-info btn-lg" style="float: right;">Refresh</button>
             </div>
+            <h2>Animate Test</h2>
+            <p>please command left, right, up, down and put a semicolon(;)</p>
             <div class="alert alert-danger" id="wrong_text_show" hidden>
                 <strong>Wrong!</strong> 확인하세요 <a id="wrong_text"></a>
             </div>
+        <form>
+            <div class="form-group">
+                <textarea class="form-control has-success" rows="10" id="command" placeholder="left 60;"></textarea>
+            </div>
         </form>
-
-        <p>
-            <button type="button" id='run_button' class="btn btn-success btn-lg">Run</button>
-            <button type="button" id='test_button' class="btn btn-default btn-lg">test</button>
-            <button type="button" id='play_button' class="btn btn-primary btn-lg">play</button>
-        </p>
     </div>
 </div>
 
-<script type="text/javascript" src="/resources/js/testAnimateJS.js"></script>
+<script type="text/javascript" src="/FirstWeb/resources/js/testAnimateJS.js"></script>
 </body>
 
 </html>

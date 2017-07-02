@@ -81,6 +81,7 @@ var $fish = $('#fish');
 var $run_button = $('#run_button');
 var $test_button = $('#test_button');
 var $play_button = $('#play_button');
+var $refresh_button = $('#refresh_button');
 var clicked_paly = false;
 
 $(document).ready(function(){
@@ -94,6 +95,7 @@ $(document).ready(function(){
     $run_button.click(function(){
     	set_init();
         $run_button.addClass("disabled");
+        $run_button.prop( "disabled", true );
         clicked_run_button();
     });
 
@@ -106,6 +108,10 @@ $(document).ready(function(){
     	clicked_paly = true;
         clicked_play_button();
     });
+    
+    $refresh_button.click(function() {
+    	location.reload();
+    })
 });
 function set_init() {
     /*$running_object.css({"left": started_position_x, "top": started_position_y });*/
@@ -115,8 +121,8 @@ function set_init() {
 }
 
 function loopBoat() {
-    $fish.animate({ 'top' : '140px'}, 500)
-        .animate({ 'top' : '120px'}, 500, loopBoat);
+    $fish.animate({ 'top' : '240px'}, 500)
+        .animate({ 'top' : '250px'}, 500, loopBoat);
 }
 
 function clicked_run_button() {
@@ -164,10 +170,12 @@ function finish_run() {
 	if(!clicked_paly) {
 		if (confirm("저장 하시겠습니까?") === true){
 			confirm_save();
+			$('#command').val('');
 		}else{
 			cancel_save();
 		}
 	}
+	$run_button.prop( "disabled", false );
     $run_button.removeClass("disabled");
     clicked_paly = false;
 }
@@ -192,7 +200,7 @@ function set_values(run_line) {
 }
 
 function frame() {
-
+	
     if(select_frame(command.left)) {
         frame_left_move();
     }else if(select_frame(command.right)){
@@ -220,6 +228,7 @@ function wrong_command() {
     $('#wrong_text').html(activity);
     $('#wrong_text_show').show();
     $run_button.removeClass("disabled");
+    $run_button.prop( "disabled", false );
 }
 
 //todo frame 정리하기

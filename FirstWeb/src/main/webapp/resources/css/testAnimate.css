@@ -7,6 +7,9 @@
     background-image: url("../image/background.jpg");
     background-repeat: repeat-x;
 }
+#size {
+    width: 400px;
+}
 #girl {
     position: absolute;
     top: 0px;
@@ -14,6 +17,6 @@
 }
 #fish {
     position: absolute;
-    top: 120px;
-    left: 120px;
+    top: 250px;
+    left: 260px;
 }
