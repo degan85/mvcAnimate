@@ -169,7 +169,7 @@ $(function(){
         items: "li:not(.ui-state-disabled)"
     });
 
-    $( "#draggable" ).draggable({
+    $( ".draggable" ).draggable({
         connectToSortable: "#sortable",
         helper: "clone",
         revert: "invalid"
