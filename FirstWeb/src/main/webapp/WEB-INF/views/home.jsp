@@ -1,5 +1,6 @@
 <!DOCTYPE html>
-<html lang="en">
+<%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
+<html lang="ko">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -63,8 +64,10 @@
     </div>
     <div class="col-sm-5">
         <h2>Animate</h2>
-        <!-- <p>아이를 움직여 원하는 곳에 놓아주세요</p>
-        <p>시작 밑으로 연결해서 움직여 주세요!!</p> -->
+        <p>아이를 움직여 원하는 곳에 놓아주세요</p>
+        <p>시작 밑으로 원하는 움직임을 드래그해서 연결해 주세요</p>
+        <p>노란색을 선택해 원하는 움직임을 선택해 주세요</p>
+        <p><span style="color:green">Run</span>을 눌러 실행해 주세요!!</p>
         <div class="alert alert-danger" id="wrong_text_show" hidden>
             <strong>Wrong!</strong> Please check!! <a id="wrong_text"></a>
         </div>

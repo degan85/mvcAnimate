@@ -11,12 +11,12 @@
     width: 400px;
 }
 #girl {
-    position: absolute;
+    position: absolute !important;
     top: 0px;
     left: 0px;
 }
 #fish {
-    position: absolute;
+    position: absolute !important;
     top: 250px;
     left: 260px;
 }
