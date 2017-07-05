@@ -11,6 +11,9 @@
 
     <!-- Latest compiled JavaScript -->
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.4.1/jquery.easing.min.js"></script>
     <title>test jquery animate</title>
      <link rel="stylesheet" type="text/css" href="/FirstWeb/resources/css/testAnimate.css">
 </head>
@@ -29,23 +32,61 @@
         </div>
         <div id="size">
             <span>0</span><span style="float: right;">400</span>
-        </div>
-    </div>
-        <div class="col-sm-5">
+
             <div>
                 <button type="button" id='run_button' class="btn btn-success btn-lg">Run</button>
                 <button type="button" id='test_button' class="btn btn-default btn-lg">fish</button>
-                <button type="button" id='play_button' class="btn btn-primary btn-lg">Play</button>
+                <button type="button" id='save_button' class="btn btn-primary btn-lg">Save</button>
                 <button type="button" id='refresh_button' class="btn btn-info btn-lg" style="float: right;">Refresh</button>
             </div>
-            <h2>Animate Test</h2>
-            <p>please command left, right, up, down and put a semicolon(;)</p>
-            <div class="alert alert-danger" id="wrong_text_show" hidden>
-                <strong>Wrong!</strong> 확인하세요 <a id="wrong_text"></a>
+            <div>
+                <select class="list-group-item input-lg" name="effects" id="effectTypes" style="background:#f9ff52; color:black;">
+                    <option value="easeInSine">easeInSine</option>
+                    <option value="easeOutSine">easeOutSine</option>
+                    <option value="easeOutQuart">easeOutQuart</option>
+                    <option value="easeInCirc">easeInCirc</option>
+                    <option value="easeInOutBack">easeInOutBack</option>
+                    <option value="easeInBack">easeInBack</option>
+                    <option value="easeInBounce">easeInBounce</option>
+                    <option value="easeInOutElastic">easeInOutElastic</option>
+                    <option value="easeInElastic">easeInElastic</option>
+                    <option value="easeOutBounce">easeOutBounce</option>
+                    <option value="easeInOutBounce">easeInOutBounce</option>
+                </select>
+                <select class="list-group-item input-lg" name="speed" id="speed" style="background:#ff7970; color:black;">
+                    <option value="300">fast</option>
+                    <option value="3000" selected>normal</option>
+                    <option value="6000">slow</option>
+                </select>
             </div>
+        </div>
+    </div>
+    <div class="col-sm-5">
+        <h2>Animate</h2>
+        <!-- <p>아이를 움직여 원하는 곳에 놓아주세요</p>
+        <p>시작 밑으로 연결해서 움직여 주세요!!</p> -->
+        <div class="alert alert-danger" id="wrong_text_show" hidden>
+            <strong>Wrong!</strong> Please check!! <a id="wrong_text"></a>
+        </div>
         <form>
-            <div class="form-group">
-                <textarea class="form-control has-success" rows="10" id="command" placeholder="left 60;"></textarea>
+            <div class="input-group">
+                <ul class="no_dropped">
+                    <li id="draggable" class="input-group">
+                        <span class="input-group-addon">
+                        <select class="list-group-item input-lg">
+                            <option>right</option>
+                            <option>left</option>
+                            <option>up</option>
+                            <option>down</option>
+                        </select>
+                        </span> move
+                        <input type="text" class="form-control input-sm" onKeyPress="return number_key_ckeck(event)">
+                    </li>
+                </ul>
+
+                <ul class="ul_container" id="sortable">
+                    <li class="list-group-item ui-state-disabled" id="start">Start~!!</li>
+                </ul>
             </div>
         </form>
     </div>
