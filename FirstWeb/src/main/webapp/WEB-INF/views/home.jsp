@@ -86,7 +86,7 @@
                             <option>down</option>
                         </select>
                         </span> move
-                        <input type="text" class="form-control input-sm" onKeyPress="return number_key_ckeck(event)">
+                        <input type="text" class="form-control input-sm" onKeyPress="return number_key_ckeck(event)" onclick="focus()">
                     </li>
                 </ul>
 
