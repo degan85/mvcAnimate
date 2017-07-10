@@ -1,11 +1,15 @@
 #container {
-    width: 400px;
-    height: 400px;
+    /*width: 1300px;
+    height: 866px;*/
     position: relative;
-    /*background: yellow;*/
+    background: yellow;
     border-radius: 8px;
-    background-image: url("../image/background.jpg");
-    background-repeat: repeat-x;
+    /*background: url(bg2.jpg) repeat-x;*/
+    /*background-size: contain;
+    background-repeat: no-repeat;
+    background-image: url("bg2.jpg");*/
+    /*width: 100%;
+    height: 866px;*/
 }
 #size{
     width: 400px;
@@ -27,10 +31,10 @@
 }
 
 ul {
-list-style-type: none;
-margin: 0;
-padding: 0;
-margin-bottom: 10px;
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    margin-bottom: 10px;
 }
 
 #start {
@@ -39,10 +43,10 @@ margin-bottom: 10px;
 }
 
 li {
-/*margin: 5px;
-padding: 5px;*/
-/* width: 100%; */
-background-color: bisque;
+    /*margin: 5px;
+    padding: 5px;*/
+    /* width: 100%; */
+    background-color: bisque;
 }
 
 input {

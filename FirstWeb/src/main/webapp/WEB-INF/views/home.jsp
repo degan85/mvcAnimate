@@ -25,10 +25,11 @@
 
 <div class="row">
     <!--<div class="col-sm-1"></div>-->
-    <div class="col-sm-6">
-        <div id ="container">
+    <div class="col-sm-8">
+        <div id ="container" style="width:100%">
+            <img src="/FirstWeb/resources/image/bg2.jpg" alt="bg" style="width:100%" id="background_img">
             <div id="girl">
-                <img src="/FirstWeb/resources/image/girl.PNG" alt="girl" width="80" height="80">
+                <img src="/FirstWeb/resources/image/girl.PNG" alt="girl" style="height:100%">
             </div>
             <div id="fish">
                 <img src="/FirstWeb/resources/image/fish.PNG" alt="fish" width="50" height="50">
@@ -65,7 +66,7 @@
             </div>
         </div>
     </div>
-    <div class="col-sm-5">
+    <div class="col-sm-4">
         <h2>Animate</h2>
         <p>아이를 움직여 원하는 곳에 놓아주세요</p>
         <p>시작 밑으로 원하는 움직임을 드래그해서 연결해 주세요</p>
