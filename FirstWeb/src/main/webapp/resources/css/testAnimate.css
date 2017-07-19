@@ -10,7 +10,7 @@
     background-image: url("bg2.jpg");*/
     /*width: 100%;
     height: 866px;*/
-}  
+}
 #size{
     width: 400px;
 }
@@ -42,12 +42,6 @@ ul {
     background-color: cadetblue;
 }
 
-li {
-    /*margin: 5px;
-    padding: 5px;*/
-    /* width: 100%; */
-    background-color: bisque;
-}
 
 input {
     width: 30%;
@@ -74,15 +68,6 @@ ul.no_dropped
 {
     border: 2px dashed #82deb5;
 }
-/* input {
-  -webkit-user-select: initial;
-  -khtml-user-select: initial;
-  -moz-user-select: initial;
-  -ms-user-select: initial;
-  user-select: initial;
-} */
-
-/*
-select {
-    color: blueviolet;
-}*/
+table td.table_button {
+    padding: 10px;
+}
