@@ -24,6 +24,7 @@
     <title>test jquery animate</title>
     <link rel="stylesheet" type="text/css" href="/FirstWeb/resources/css/testAnimate.css">
 </head>
+
 <body>
 <table width="100%">
     <tr>
@@ -47,6 +48,14 @@
             <div id="blocklyDiv" style="position: absolute" onchange="alertF()"></div>
             <xml id="toolbox" style="display: none">
                 <category name="Move" colour="#805ba5">
+                    <block type="running_object">
+                        <field name="running_object_pic">girl</field>
+                    </block>
+                    <block type="angle_move">
+                        <field name="move_angle">90</field>
+                        <field name="move_angle_distance">1</field>
+                    </block>
+
                     <block type="direction_block_left">
                         <field name="direction">right</field>
                         <field name="distance">1</field>
@@ -54,9 +63,6 @@
                     <block type="direction_block_top">
                         <field name="direction">up</field>
                         <field name="distance">1</field>
-                    </block>
-                    <block type="running_object">
-                        <field name="running_object_pic">girl</field>
                     </block>
                     <block type="effects">
                         <field name="easing">easeInBounce</field>
@@ -113,6 +119,108 @@
                         <field name="FLOW">BREAK</field>
                     </block>
                 </category>
+                <category name="Math" colour="#5C68A6">
+                    <block type="math_round">
+                        <field name="OP">ROUND</field>
+                        <value name="NUM">
+                            <shadow type="math_number">
+                                <field name="NUM">3.1</field>
+                            </shadow>
+                        </value>
+                    </block>
+                    <block type="math_number">
+                        <field name="NUM">0</field>
+                    </block>
+                    <block type="math_single">
+                        <field name="OP">ROOT</field>
+                        <value name="NUM">
+                            <shadow type="math_number">
+                                <field name="NUM">9</field>
+                            </shadow>
+                        </value>
+                    </block>
+                    <block type="math_trig">
+                        <field name="OP">SIN</field>
+                        <value name="NUM">
+                            <shadow type="math_number">
+                                <field name="NUM">45</field>
+                            </shadow>
+                        </value>
+                    </block>
+                    <block type="math_constant">
+                        <field name="CONSTANT">PI</field>
+                    </block>
+                    <block type="math_number_property">
+                        <mutation divisor_input="false"></mutation>
+                        <field name="PROPERTY">EVEN</field>
+                        <value name="NUMBER_TO_CHECK">
+                            <shadow type="math_number">
+                                <field name="NUM">0</field>
+                            </shadow>
+                        </value>
+                    </block>
+                    <block type="math_arithmetic">
+                        <field name="OP">ADD</field>
+                        <value name="A">
+                            <shadow type="math_number">
+                                <field name="NUM">1</field>
+                            </shadow>
+                        </value>
+                        <value name="B">
+                            <shadow type="math_number">
+                                <field name="NUM">1</field>
+                            </shadow>
+                        </value>
+                    </block>
+                    <block type="math_on_list">
+                        <mutation op="SUM"></mutation>
+                        <field name="OP">SUM</field>
+                    </block>
+                    <block type="math_modulo">
+                        <value name="DIVIDEND">
+                            <shadow type="math_number">
+                                <field name="NUM">64</field>
+                            </shadow>
+                        </value>
+                        <value name="DIVISOR">
+                            <shadow type="math_number">
+                                <field name="NUM">10</field>
+                            </shadow>
+                        </value>
+                    </block>
+                    <block type="math_constrain">
+                        <value name="VALUE">
+                            <shadow type="math_number">
+                                <field name="NUM">50</field>
+                            </shadow>
+                        </value>
+                        <value name="LOW">
+                            <shadow type="math_number">
+                                <field name="NUM">1</field>
+                            </shadow>
+                        </value>
+                        <value name="HIGH">
+                            <shadow type="math_number">
+                                <field name="NUM">100</field>
+                            </shadow>
+                        </value>
+                    </block>
+                    <block type="math_random_int">
+                        <value name="FROM">
+                            <shadow type="math_number">
+                                <field name="NUM">1</field>
+                            </shadow>
+                        </value>
+                        <value name="TO">
+                            <shadow type="math_number">
+                                <field name="NUM">100</field>
+                            </shadow>
+                        </value>
+                    </block>
+                    <block type="math_random_float"></block>
+                </category>
+                <category name="Variables" colour="#A65C81" custom="VARIABLE"></category>
+                <category name="Functions" colour="#9A5CA6" custom="PROCEDURE"></category>
             </xml>
         </td>
     </tr>
@@ -138,11 +246,11 @@
                 <option value="easeOutBounce">easeOutBounce</option>
                 <option value="easeInOutBounce">easeInOutBounce</option>
             </select>-->
-           <!-- <select class="list-group-item input-lg" name="speed" id="speed" style="background:#ff7970; color:black;">
-                <option value="100">fast</option>
-                <option value="600" selected>normal</option>
-                <option value="2000">slow</option>
-            </select>-->
+            <!-- <select class="list-group-item input-lg" name="speed" id="speed" style="background:#ff7970; color:black;">
+                 <option value="100">fast</option>
+                 <option value="600" selected>normal</option>
+                 <option value="2000">slow</option>
+             </select>-->
         </td>
     </tr>
     <tr>
@@ -154,12 +262,18 @@
 
 
 
-        <!-- <button type="button" id='test_button' class="btn btn-default btn-lg">fish</button>-->
-        <!-- <button type="button" id='save_button' class="btn btn-primary btn-lg">Save</button>-->
+<!-- <button type="button" id='test_button' class="btn btn-default btn-lg">fish</button>-->
+<!-- <button type="button" id='save_button' class="btn btn-primary btn-lg">Save</button>-->
 
-  
+</div>
+<div>
 
+</div>
+</div>
 
+<div class="col-sm-3.5">
+
+</div>
 </div>
 <script type="text/javascript" src="/FirstWeb/resources/js/blockly_js.js"></script>
 <script type="text/javascript" src="/FirstWeb/resources/js/testAnimateJS.js"></script>
